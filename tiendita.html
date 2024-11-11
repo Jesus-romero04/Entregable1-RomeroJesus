@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Bienvenido a la Tienda</h1>
+
+<!-- Botón para abrir el carrito -->
+<button id="cart-button">Ver Carrito</button>
+
+<!-- Modal del carrito -->
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close">&times;</span>
+        <h2>Carrito</h2>
+        <div id="cart-items"></div>
+        <div id="total"></div>
+        <button id="clear-cart">Vaciar carrito</button>
+        <button id="comprar">Comprar</button>
+    </div>
+</div>
+
+<!-- Productos -->
+<div class="productos">
+    <div class="producto">
+        <h3>Pepsi</h3>
+        <p>$10.00</p>
+        <button class="add-to-cart" data-name="Pepsi" data-price="10.00">Agregar al Carrito</button>
+        <img class="bebidas" src="/assets/pepsi.png">
+
+    </div>
+    <div class="producto">
+        <h3>Coca Cola</h3>
+        <p>$10.00</p>
+        <button class="add-to-cart" data-name="Coca cola" data-price="10.00">Agregar al Carrito</button>
+        <img class="bebidas" src="/assets/cocacola.png">
+    </div>
+    <div class="producto">
+        <h3>Fanta</h3>
+        <p>$10.00</p>
+        <button class="add-to-cart" data-name="Fanta" data-price="10.00">Agregar al Carrito</button>
+        <img class="bebidas" src ="/assets/fanta.png"> 
+    </div>
+</div>
+
+
+
+<script src="main.js"></script>
+
+</body>
+</html>
