@@ -1,22 +1,36 @@
-/* Estilos generales */
+
 body {
     font-family: Arial, sans-serif;
-    background-color:#000300
+    background-image: url(./assets/body.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
+    
 }
+.frase{
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+        -webkit-background-clip: text;
+        background-size: 300%;
+        -webkit-text-fill-color: transparent;
+        animation: colorAnimation 5s infinite alternate;
+    }
+    
+    @keyframes colorAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+    }
 
 h1, h2 {
     text-align: center;
-    color: #d8a61b;
-}
-
-/* Login */
-.login-container {
-    max-width: 400px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #000000;
 }
 
 input, button {
@@ -27,30 +41,24 @@ input, button {
 }
 
 button {
-    background-color: #d8a61b;
+    background-color: #e53935;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #ee965c;
-}
-
-/* Estilos para el mensaje de error */
-#errorMessage {
-    color: red;
-    display: none; /* Inicialmente oculto */
-    text-align: center;
+    background-color: #f56e45;
 }
 
 
-/* Productos */
 .productos {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    margin: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .producto {
@@ -72,7 +80,7 @@ button.add-to-cart:hover {
     background-color: #8c52a7;
 }
 
-/* Carrito Modal */
+
 .cart-modal {
     display: none;
     position: fixed;

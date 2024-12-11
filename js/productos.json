@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Pepsi",
+        "price": 1200,
+        "image": "/assets/pepsi.png"
+    },
+    {
+        "name": "Coca Cola",
+        "price": 1200,
+        "image": "/assets/coca-cola.png"
+    },
+    {
+        "name": "Fanta",
+        "price": 1200,
+        "image": "/assets/fanta.png"
+    },
+    {
+        "name": "Doble Cola",
+        "price": 1200,
+        "image": "/assets/doble-cola.png"
+    },
+    {
+        "name": "Manaos Naranja",
+        "price": 1200,
+        "image": "/assets/manaos-naranja.png"
+    },
+    {
+        "name": "Manaos Lima Limon",
+        "price": 1200,
+        "image": "/assets/manaos-lima-limon.png"
+    },
+    {
+        "name": "Pritty",
+        "price": 1100,
+        "image": "/assets/pritty.png"
+    },
+    {
+        "name": "Mirinda",
+        "price": 1150,
+        "image": "/assets/mirinda.png"
+    },
+    {
+        "name": "Paso de los toro",
+        "price": 1100,
+        "image": "/assets/paso-de-los-toro.png"
+    }
+]

@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+   
+    <h1>Bienvenido a la Tienda de Refrescos</h1>
+    <p class="frase">"Refresca tus momentos, disfruta el sabor de la vida."</p>
 
-<h1>Bienvenido a la Tienda</h1>
+  
 
-<!-- Botón para abrir el carrito -->
 <button id="cart-button">Ver Carrito</button>
+ 
 
-<!-- Modal del carrito -->
+
 <div id="cart-modal" class="cart-modal">
     <div class="cart-modal-content">
         <span class="close">&times;</span>
@@ -25,32 +28,69 @@
     </div>
 </div>
 
-<!-- Productos -->
+
 <div class="productos">
     <div class="producto">
         <h3>Pepsi</h3>
-        <p>$10.00</p>
-        <button class="add-to-cart" data-name="Pepsi" data-price="10.00">Agregar al Carrito</button>
+        <p>$1200</p>
+        <button class="add-to-cart" data-name="Pepsi" data-price="1200">Agregar al Carrito</button>
         <img class="bebidas" src="/assets/pepsi.png">
 
     </div>
     <div class="producto">
         <h3>Coca Cola</h3>
-        <p>$10.00</p>
-        <button class="add-to-cart" data-name="Coca cola" data-price="10.00">Agregar al Carrito</button>
-        <img class="bebidas" src="/assets/cocacola.png">
+        <p>$1200</p>
+        <button class="add-to-cart" data-name="Coca cola" data-price="1200">Agregar al Carrito</button>
+        <img class="bebidas" src="/assets/coca-cola.png">
     </div>
     <div class="producto">
         <h3>Fanta</h3>
-        <p>$10.00</p>
-        <button class="add-to-cart" data-name="Fanta" data-price="10.00">Agregar al Carrito</button>
+        <p>$1200</p>
+        <button class="add-to-cart" data-name="Fanta" data-price="1200">Agregar al Carrito</button>
         <img class="bebidas" src ="/assets/fanta.png"> 
+    </div>
+    <div class="producto">
+        <h3>Doble Cola</h3>
+        <p>$1200</p>
+        <button class="add-to-cart" data-name="doblecola" data-price="1200">Agregar al Carrito</button>
+        <img class="bebidas" src ="/assets/doble-cola.png"> 
+    </div>
+    <div class="producto">
+        <h3>Manaos Naranja</h3>
+        <p>$1200</p>
+        <button class="add-to-cart" data-name="manaosnaranja" data-price="1200">Agregar al Carrito</button>
+        <img class="bebidas" src ="/assets/manaos-naranja.png"> 
+    </div>
+    <div class="producto">
+        <h3>Manaos Lima Limon</h3>
+        <p>$1200</p>
+        <button class="add-to-cart" data-name="manaoslimalimon" data-price="1200">Agregar al Carrito</button>
+        <img class="bebidas" src ="/assets/manaos-lima-limon.png"> 
+    </div>
+    <div class="producto">
+        <h3>Pritty</h3>
+        <p>$1100</p>
+        <button class="add-to-cart" data-name="pritty" data-price="1200">Agregar al Carrito</button>
+        <img class="bebidas" src ="/assets/pritty.png"> 
+    </div>
+    <div class="producto">
+        <h3>Mirinda</h3>
+        <p>$1150</p>
+        <button class="add-to-cart" data-name="mirinda" data-price="1200">Agregar al Carrito</button>
+        <img class="bebidas" src ="/assets/mirinda.png"> 
+    </div>
+    <div class="producto">
+        <h3>Paso de los toro</h3>
+        <p>$1100</p>
+        <button class="add-to-cart" data-name="pasodelostoro" data-price="1200">Agregar al Carrito</button>
+        <img class="bebidas" src ="/assets/paso-de-los-toro.png"> 
     </div>
 </div>
 
 
-
-<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/main.js"></script>
+<script src="./js/compra.js"></script>
 
 </body>
 </html>
