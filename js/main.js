@@ -50,51 +50,51 @@ function renderCart() {
 }
 
 
-fetch('productos.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Error al cargar los productos: ' + response.statusText);
-        }
-        return response.json();
-    })
-    .then(data => renderProducts(data))
-    .catch(error => console.error(error));
-
-
-function renderProducts(products) {
-    const productsContainer = document.querySelector('.productos');
-    productsContainer.innerHTML = ''; 
-
-    products.forEach(product => {
-        const productElement = document.createElement('div');
-        productElement.classList.add('producto');
-        productElement.innerHTML = `
-            <h3>${product.name}</h3>
-            <p>$${product.price.toFixed(2)}</p> <!-- Formatear el precio con dos decimales -->
-            <button class="add-to-cart" data-name="${product.name}" data-price="${product.price}">Agregar al Carrito</button>
-            <img class="bebidas" src="${product.image}" alt="${product.name}">
-        `;
-        productsContainer.appendChild(productElement);
-    });
-
+document.addEventListener("DOMContentLoaded", () => {
+    loadCartFromLocalStorage();
+    fetch('./js/productos.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al cargar los productos: ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => renderProducts(data))
+        .catch(error => console.error(error));
+});
+    function renderProducts(products) {
+        const productsContainer = document.querySelector('.productos');
+        productsContainer.innerHTML = ''; 
     
-    document.querySelectorAll(".add-to-cart").forEach(button => {
-        button.addEventListener("click", (event) => {
-            const name = event.target.getAttribute("data-name");
-            const price = parseFloat(event.target.getAttribute("data-price"));
-            
-            addToCart(name, price); 
-            
-            
-            Swal.fire({
-                title: 'Producto Agregado',
-                text: `${name} ha sido agregado al carrito.`,
-                icon: 'success',
-                confirmButtonText: 'Cerrar'
+        products.forEach(product => {
+            const productElement = document.createElement('div');
+            productElement.classList.add('producto');
+            productElement.innerHTML = `
+                <h3>${product.name}</h3>
+                <p>$${product.price.toFixed(2)}</p>
+                <button class="add-to-cart" data-name="${product.name}" data-price="${product.price}">Agregar al Carrito</button>
+                <img class="bebidas" src="${product.image}" alt="${product.name}">
+            `;
+            productsContainer.appendChild(productElement);
+        });
+    
+        // Asignar eventos de clic a los botones
+        document.querySelectorAll(".add-to-cart").forEach(button => {
+            button.addEventListener("click", (event) => {
+                const name = event.target.getAttribute("data-name");
+                const price = parseFloat(event.target.getAttribute("data-price"));
+                console.log(`Producto: ${name}, Precio: ${price}`); // Verificar que captura datos
+                addToCart(name, price);
+                
+                Swal.fire({
+                    title: 'Producto Agregado',
+                    text: `${name} ha sido agregado al carrito.`,
+                    icon: 'success',
+                    confirmButtonText: 'Cerrar'
+                });
             });
         });
-    });
-}
+    }
 
 
 function addToCart(name, price) {
