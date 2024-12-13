@@ -1,9 +1,9 @@
-// Funcionalidad para la compra
+
 const purchaseButton = document.getElementById("comprar");
 
 purchaseButton.addEventListener("click", () => {
     if (cart.length > 0) {
-        // Mostrar el formulario de datos del cliente
+        
         Swal.fire({
             title: 'Datos del Cliente',
             html: `
@@ -29,7 +29,7 @@ purchaseButton.addEventListener("click", () => {
             if (result.isConfirmed) {
                 const { name, address, phone } = result.value;
 
-                // Mostrar mensaje de confirmación con los datos del cliente
+                
                 Swal.fire({
                     title: 'Confirmación de Compra',
                     html: `
